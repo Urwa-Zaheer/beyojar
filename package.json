@@ -1,36 +1,39 @@
 {
-    "name": "beyojar",
-    "version": "1.0.0",
-    "private": true,
-    "scripts": {
-        "lint": "npm run lint --workspaces",
-        "lint:fix": "npm run lint:fix --workspaces",
-        "build:landing": "npm run build --workspace=landing",
-        "start:landing": "npm run start --workspace=landing",
-        "start:expo": "npm run start --workspace=mobile",
-        "start:android": "npm run android --workspace=mobile",
-        "start:ios": "npm run ios --workspace=mobile",
-        "start:web": "npm run web --workspace=mobile",
-        "storybook:mobile": "npm run storybook --workspace=mobile",
-        "storybook-test:mobile": "npm run test-storybook --workspace=mobile",
-        "storybook-build:mobile": "npm run build-storybook --workspace=mobile",
-        "storybook-test-ci:mobile": "npm run test-storybook:ci --workspace=mobile",
-        "format-rest": "npx prettier --ignore-path .gitignore --write \"**/*.{css,md,json,yml}\" \"!package-lock.json\"",
-        "prepare": "is-ci || husky install"
-    },
-    "workspaces": [
-        "mobile",
-        "landing"
-    ],
-    "devDependencies": {
-        "husky": "^8.0.2",
-        "is-ci": "^3.0.1",
-        "lint-staged": "^13.0.3",
-        "prettier": "2.7.1"
-    },
-    "lint-staged": {
-        "mobile/**/*.{js,jsx,ts,tsx}": "npm run lint:fix --workspace=mobile",
-        "landing/**/*.{js,jsx,ts,tsx}": "npm run lint:fix --workspace=landing",
-        "*.{css,md,json,yml}": "npm run format-rest"
-    }
+  "name": "beyojar",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "npm run lint --workspaces",
+    "lint:fix": "npm run lint:fix --workspaces",
+    "build:landing": "npm run build --workspace=landing",
+    "start:landing": "npm run start --workspace=landing",
+    "start:expo": "npm run start --workspace=mobile",
+    "start:android": "npm run android --workspace=mobile",
+    "start:ios": "npm run ios --workspace=mobile",
+    "start:web": "npm run web --workspace=mobile",
+    "storybook:mobile": "npm run storybook --workspace=mobile",
+    "storybook-test:mobile": "npm run test-storybook --workspace=mobile",
+    "storybook-build:mobile": "npm run build-storybook --workspace=mobile",
+    "storybook-test-ci:mobile": "npm run test-storybook:ci --workspace=mobile",
+    "format-rest": "npx prettier --ignore-path .gitignore --write \"**/*.{css,md,json,yml}\" \"!package-lock.json\"",
+    "prepare": "is-ci || husky install"
+  },
+  "workspaces": [
+    "mobile",
+    "landing"
+  ],
+  "devDependencies": {
+    "husky": "^8.0.2",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "2.7.1"
+  },
+  "lint-staged": {
+    "mobile/**/*.{js,jsx,ts,tsx}": "npm run lint:fix --workspace=mobile",
+    "landing/**/*.{js,jsx,ts,tsx}": "npm run lint:fix --workspace=landing",
+    "*.{css,md,json,yml}": "npm run format-rest"
+  },
+  "dependencies": {
+    "react-native": "0.69.9"
+  }
 }

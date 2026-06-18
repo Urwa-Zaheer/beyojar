@@ -1,4 +1,3 @@
-<br>
 <h1 align="center"> <b>Beyojar</b> </h1> 
 <h4 align="center">A minimal, open source notes app built with <a href="https://reactnative.dev" target="_blank">React-Native</a> & <a href="https://docs.expo.dev" target="_blank">Expo</a>.</h4>
 <br>
